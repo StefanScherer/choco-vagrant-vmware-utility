@@ -1,5 +1,5 @@
-$url64 = 'https://releases.hashicorp.com/vagrant-vmware-utility/0.9.9/vagrant-vmware-utility_0.9.9_x86_64.msi'
-$checksum64 = '24140831596cd8ce5be3ba8205cdd7fc8ebd6ebffe7dde445249b6ab82ab8bff'
+$url64 = 'https://releases.hashicorp.com/vagrant-vmware-utility/1.0.0/vagrant-vmware-utility_1.0.0_x86_64.msi'
+$checksum64 = '137c63289a75cd82dc64369aa55c2afdf7fb8676492938ac5156397a255b99c5'
 $checksumType64 = $checksumType
 $url = $url64
 $checksum = $checksum64
