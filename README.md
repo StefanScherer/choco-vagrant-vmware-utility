@@ -2,7 +2,7 @@
 
 [![Latest version released](https://img.shields.io/chocolatey/v/vagrant-vmware-utility.svg)](https://chocolatey.org/packages/vagrant-vmware-utility)
 [![Package downloads count](https://img.shields.io/chocolatey/dt/vagrant-vmware-utility.svg)](https://chocolatey.org/packages/vagrant-vmware-utility)
-[![Build status](https://ci.appveyor.com/api/projects/status/2h4xf63mmnxg3yyi/branch/master?svg=true)](https://ci.appveyor.com/project/StefanScherer/choco-vagrant-vmware-utility/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/5s3f2lgo7lt9xgmj?svg=true)](https://ci.appveyor.com/project/StefanScherer/choco-vagrant-vmware-utility)
 
 This is a chocolatey package for the Vagrant VMware Utility. Please see MAINTENANCE.md
 for information on how to upkeep it.
