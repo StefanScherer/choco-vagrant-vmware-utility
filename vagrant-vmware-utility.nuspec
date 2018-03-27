@@ -21,6 +21,9 @@ Isolating the features which require privileged access into a system installer p
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/269d34200380fe4fded0508b85e341e1c055cd85/icons/vagrant.png</iconUrl>
     <releaseNotes>[CHANGELOG](https://github.com/hashicorp/vagrant-plugin-changelog/blob/master/vagrant-vmware-utility-changelog.md)</releaseNotes>
+    <dependencies>
+      <dependency id="vmwareworkstation" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

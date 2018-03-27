@@ -21,12 +21,14 @@ esac
 version=$1
 
 shaurl="https://releases.hashicorp.com/vagrant-vmware-utility/${version}/vagrant-vmware-utility_${version}_SHA256SUMS"
-url64="https://releases.hashicorp.com/vagrant-vmware-utility/${version}/vagrant-vmware-utility_${version}_x86_64.msi"
-checksum64=$(curl "${shaurl}" | grep _x86_64.msi | cut -f 1 -d " ")
+url="https://releases.hashicorp.com/vagrant-vmware-utility/${version}/vagrant-vmware-utility_${version}_x86_64.msi"
+checksum=$(curl "${shaurl}" | grep _x86_64.msi | cut -f 1 -d " ")
 
 sed -i.bak "s/<version>.*<\/version>/<version>${version}<\/version>/" vagrant-vmware-utility.nuspec
 
 sed -i.bak "s/version: .*{build}/version: ${version}.{build}/" appveyor.yml
 
-sed -i.bak "s!^\$url64 = '.*'!\$url64 = '${url64}'!" tools/chocolateyInstall.ps1
-sed -i.bak "s/^\$checksum64 = '.*'/\$checksum64 = '${checksum64}'/" tools/chocolateyInstall.ps1
+sed -i.bak "s!url = '.*'!url = '${url}'!" tools/chocolateyInstall.ps1
+sed -i.bak "s!url64bit = '.*'!url64bit = '${url}'!" tools/chocolateyInstall.ps1
+sed -i.bak "s/checksum = '.*'/checksum = '${checksum}'/" tools/chocolateyInstall.ps1
+sed -i.bak "s/checksum64 = '.*'/checksum64 = '${checksum}'/" tools/chocolateyInstall.ps1
