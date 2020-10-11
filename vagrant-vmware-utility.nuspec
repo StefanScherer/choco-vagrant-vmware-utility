@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>vagrant-vmware-utility</id>
-    <version>1.0.7</version>
+    <version>1.0.13</version>
     <title>Vagrant VMware Utility</title>
     <authors>HashiCorp</authors>
     <owners>Stefan Scherer</owners>
@@ -16,7 +16,7 @@ Isolating the features which require privileged access into a system installer p
     <bugTrackerUrl>https://github.com/hashicorp/vagrant/issues</bugTrackerUrl>
     <packageSourceUrl>https://github.com/StefanScherer/choco-vagrant-vmware-utility</packageSourceUrl>
     <tags>Vagrant VMware Workstation</tags>
-    <copyright>Copyright 2018 HashiCorp</copyright>
+    <copyright>Copyright 2020 HashiCorp</copyright>
     <licenseUrl>https://www.vagrantup.com/vmware/eula.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/269d34200380fe4fded0508b85e341e1c055cd85/icons/vagrant.png</iconUrl>
