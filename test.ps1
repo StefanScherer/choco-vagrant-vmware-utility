@@ -5,7 +5,7 @@ if ($env:APPVEYOR_BUILD_VERSION) {
   $version = $env:APPVEYOR_BUILD_VERSION -replace('\.[^.\\/]+$')
 
   # install VMware Workstation first
-  choco install -y vmwareworkstation
+  choco install -y vmwareworkstation --version=15.0.3
 } else {
   # run manually
   [xml]$spec = Get-Content vagrant-vmware-utility.nuspec
