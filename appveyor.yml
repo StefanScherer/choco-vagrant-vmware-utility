@@ -7,7 +7,6 @@ build_script:
   - ps: choco pack
 
 test_script:
-  - choco install vmwareworkstation
   - ps: .\test.ps1
 
 deploy_script:
