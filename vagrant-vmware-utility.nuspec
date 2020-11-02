@@ -10,7 +10,7 @@
     <description>The Vagrant VMware Utility is a system installer package and is required by the Vagrant VMware Desktop plugin for proper functionality. This system installer provides a small utility service that Vagrant utilizes for interacting with VMware on the system.
 
 Isolating the features which require privileged access into a system installer package provides an easier and more secure installation. Isolating privileged activities to the Vagrant VMware Utility also means that only one privileged installation action must be taken on a system. After the package is installed, any user on the system can be allowed to interact with the utility without the need for privilege escalation.</description>
-    <projectUrl>https://www.vagrantup.com/vmware/index.html</projectUrl>
+    <projectUrl>https://www.vagrantup.com/vmware</projectUrl>
     <docsUrl>https://www.vagrantup.com/docs/vmware/</docsUrl>
     <mailingListUrl>https://groups.google.com/forum/#!forum/vagrant-up</mailingListUrl>
     <bugTrackerUrl>https://github.com/hashicorp/vagrant/issues</bugTrackerUrl>
