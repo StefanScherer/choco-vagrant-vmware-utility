@@ -29,26 +29,22 @@ the official Vagrant VMware Utility version string correctly.
 You need to update `$url`, `$url64`, `$checksum` and `$checksum64`
 variables below.
 
-#### 4. Update appveyor.yml
+#### 4. Git push
 
-You need to update `version` with the official Vagrant VMware Utility version.
-
-#### 5. Git push
-
-Push your changes to GitHub and check the AppVeyor build. See the AppVeyor build section below for details.
+Push your changes to GitHub and check the GitHub Actions build. See the GitHub Actions build section below for details.
 
     git push
 
-#### 6. Git tag
+#### 5. Git tag
 
-After a successfull AppVeyor build tag the sources and push the new tag to GitHub. This step builds and tests the package and pushes the new package to Chocolatey.
+After a successfull GitHub Actions build tag the sources and push the new tag to GitHub. This step builds and tests the package and pushes the new package to Chocolatey.
 
     git tag 0.2.1.20150603
     git push --tags
 
-## AppVeyor build
+## GitHub Actions build
 
-The Vagrant VMware Utility chocolatey package is built with the AppVeyor CI service.
+The Vagrant VMware Utility chocolatey package is built with the GitHub Actions CI service.
 
 ### Build steps
 
@@ -86,7 +82,7 @@ Run the following commands to verify uninstallation works:
 
     choco uninstall vagrant-vmware-utility
 
-See the script `test.ps1` for all tests that run on AppVeyor.
+See the script `test.ps1` for all tests that run on GitHub Actions.
 
 ### Deploy steps
 

@@ -26,8 +26,6 @@ checksum=$(curl "${shaurl}" | grep _x86_64.msi | cut -f 1 -d " ")
 
 sed -i.bak "s/<version>.*<\/version>/<version>${version}<\/version>/" vagrant-vmware-utility.nuspec
 
-sed -i.bak "s/version: .*{build}/version: ${version}.{build}/" appveyor.yml
-
 sed -i.bak "s!url = '.*'!url = '${url}'!" tools/chocolateyInstall.ps1
 sed -i.bak "s!url64bit = '.*'!url64bit = '${url}'!" tools/chocolateyInstall.ps1
 sed -i.bak "s/checksum = '.*'/checksum = '${checksum}'/" tools/chocolateyInstall.ps1
