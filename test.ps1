@@ -1,15 +1,11 @@
 $ErrorActionPreference = "Stop"
 
-if ($env:APPVEYOR_BUILD_VERSION) {
-  # run in CI
-  $version = $env:APPVEYOR_BUILD_VERSION -replace('\.[^.\\/]+$')
+[xml]$spec = Get-Content vagrant-vmware-utility.nuspec
+$version = $spec.package.metadata.version
 
+if ($env:CI) {
   # install VMware Workstation first
   choco install -y vmwareworkstation --version=15.0.3
-} else {
-  # run manually
-  [xml]$spec = Get-Content vagrant-vmware-utility.nuspec
-  $version = $spec.package.metadata.version
 }
 
 "TEST: Version $version in vagrant-vmware-utility.nuspec file should match"

@@ -1,0 +1,31 @@
+name: Publish
+
+on:
+  push:
+    tags:
+      - 1.*
+
+jobs:
+  publish-vagrant-vmware-utility:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Choco pack
+        uses: crazy-max/ghaction-chocolatey@v2.1.0
+        with:
+          args: pack .\vagrant-vmware-utility.nuspec
+
+      - name: Test
+        run: .\test.ps1
+
+      - name: Add Choco API Key
+        uses: crazy-max/ghaction-chocolatey@v2.1.0
+        with:
+          args: apikey --key ${{secrets.CHOCO_API_KEY}} --source https://push.chocolatey.org/
+
+      - name: Publish (noop)
+        uses: crazy-max/ghaction-chocolatey@v2.1.0
+        with:
+          args: push

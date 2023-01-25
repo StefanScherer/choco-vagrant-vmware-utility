@@ -1,0 +1,27 @@
+name: Build
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  vagrant-vmware-utility:
+    runs-on: windows-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      - name: Choco pack
+        uses: crazy-max/ghaction-chocolatey@v2.1.0
+        with:
+          args: pack .\vagrant-vmware-utility.nuspec
+
+      - name: Test
+        run: .\test.ps1
