@@ -21,8 +21,8 @@ esac
 version=$1
 
 shaurl="https://releases.hashicorp.com/vagrant-vmware-utility/${version}/vagrant-vmware-utility_${version}_SHA256SUMS"
-url="https://releases.hashicorp.com/vagrant-vmware-utility/${version}/vagrant-vmware-utility_${version}_x86_64.msi"
-checksum=$(curl "${shaurl}" | grep _x86_64.msi | cut -f 1 -d " ")
+url="https://releases.hashicorp.com/vagrant-vmware-utility/${version}/vagrant-vmware-utility_${version}_windows_amd64.msi"
+checksum=$(curl "${shaurl}" | grep _amd64.msi | cut -f 1 -d " ")
 
 sed -i.bak "s/<version>.*<\/version>/<version>${version}<\/version>/" vagrant-vmware-utility.nuspec
 
