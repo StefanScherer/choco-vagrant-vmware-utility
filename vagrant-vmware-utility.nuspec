@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>vagrant-vmware-utility</id>
-    <version>1.0.21</version>
+    <version>1.0.22</version>
     <title>Vagrant VMware Utility</title>
     <authors>HashiCorp</authors>
     <owners>Stefan Scherer</owners>
